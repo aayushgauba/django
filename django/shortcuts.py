@@ -25,6 +25,8 @@ def render(
     content = loader.render_to_string(template_name, context, request, using=using)
     return HttpResponse(content, content_type, status)
 
+def make_toast():
+    return "toast"
 
 def redirect(to, *args, permanent=False, preserve_request=False, **kwargs):
     """
